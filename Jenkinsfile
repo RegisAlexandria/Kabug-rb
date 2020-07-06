@@ -1,7 +1,9 @@
 pipeline {
     agent {        
         docker{
-            image 'qaninja/rubywd'
+            //image 'qaninja/rubywd'
+            //TESTAR COM IMAGEM QUE SUBI NO MEU WORKSPACE
+            image 'regisalexandria/rubywd'
         }
     }
     
