@@ -9,14 +9,14 @@ pipeline {
         stage('Build'){
             steps{
                 echo 'Building or Resolve dependencies!'
+                sh 'rm -f Gemfile.lock'
                 sh 'bundle install'
             }
         }
         
         stage('Test'){
             steps{
-                echo 'Running Regression Tests'
-                sh 'rm -f Gemfile.lock'
+                echo 'Running Regression Tests'                
                 sh 'bundle exec cucumber -p ci'
             }
         }
